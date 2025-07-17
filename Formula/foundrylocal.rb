@@ -11,6 +11,9 @@ class Foundrylocal < Formula
     prefix.install Dir["bin/libonnxruntime.dylib"]
     prefix.install Dir["bin/appsettings.json"]
 
+    preserve_mach_o "bin/libonnxruntime-genai.dylib"
+    preserve_mach_o "bin/libonnxruntime.dylib"
+    
     bin.install_symlink prefix/"foundry"
   end
 end
